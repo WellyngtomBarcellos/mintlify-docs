@@ -1,6 +1,7 @@
 ---
 title: "Introdução"
-description: "Welcome to the home of your new documentation"
+description: "Seja bem vindo(a) ao sistema lhama! Desenvolvido pela Deez Entertainments, foi criada especialmente para resover o problema de altos volumes de videos criados pelo usuário da atual plataforma de compartilhamento de conteúdos.
+"
 ---
 
 <img
@@ -11,39 +12,32 @@ description: "Welcome to the home of your new documentation"
 
 <img
   className="hidden dark:block"
-  src="/images/hero-dark.png"
+  src="/hero-dark.png"
   alt="Hero Dark"
   style={{ width:"100%" }}
+  title=""
 />
 
-## Setting up
+# <Icon icon="gear" iconType="thin" color="#3e20ff" size={40} /> Configurações
 
-The first step to world-class documentation is setting up your editing environments.
+Com o sistema Lhama, você tem algumas ferramentas poderosas, incluindo a conversão de formato até a compressão e insersão de legendas.
 
-<CardGroup cols={2}>
-  <Card title="Edit Your Docs" icon="pen-to-square" href="https://mintlify.com/docs/quickstart">
-    Get your docs set up locally for easy development
-  </Card>
-  <Card title="Preview Changes" icon="image" href="https://mintlify.com/docs/development">
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+- Compressão de 0 a 100% baseada na ualidade atual do video.
+- Mais de 10 formatos de videos disponiveis para conversão e compactação
+- Video pesado ? sem problemas, com o lhama você tem uma máxima compressão sem reduzir a qualidade total.
 
-## Make it yours
+## <Icon icon="golf-flag-hole" iconType="thin" color="#3e20ff" size={40} /> **Vai que é sua**
 
-Update your docs to your brand and add valuable content for the best user conversion.
+API construida com 3 simples intensoes:
 
-<CardGroup cols={2}>
-  <Card title="Customize Style" icon="palette" href="https://mintlify.com/docs/settings/global">
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card title="Reference APIs" icon="code" href="https://mintlify.com/docs/api-playground/openapi">
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card title="Add Components" icon="screwdriver-wrench" href="https://mintlify.com/docs/content/components/accordions">
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card title="Get Inspiration" icon="stars" href="https://mintlify.com/customers">
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+1. \*\*Direto: \*\*Cada rota faz exatamente oque você lê:
+
+   ```bash
+   post: api/video/compress/global (Comprime com parâmetros globais)
+   post: api/video/compress/partial (Comprime com alguns parâmetros parciais)
+   ```
+2. \*\*Consistente: \*\*Nossa API retorna sempre um option contendo o erro ou os dados de retorno, o que facilita a implementação em linguagens de tipagem forte e constistência em todas as operações.
+
+# <Icon icon="envelope" iconType="thin" color="#3e20ff" size={40} /> Dúvidas ?
+
+Estamos preparados para te ajudar na implementação no seu projeto\! Entre com contato pelo email [suporte@deezegg.co**m**](mailto:suporte@deezegg.com)
