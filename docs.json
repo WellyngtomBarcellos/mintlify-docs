@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "willow",
+  "name": "Lhama start doc",
   "colors": {
     "primary": "#5322E6",
     "light": "#07C983",
@@ -68,8 +68,8 @@
   },
   
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/lhama-black.png",
+    "dark": "/logo/lhama.png"
   },
   "navbar": {
     "links": [
