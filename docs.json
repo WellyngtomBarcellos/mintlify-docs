@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "mint",
   "name": "Lhama",
   "colors": {
     "primary": "#5322E6",
@@ -14,11 +14,9 @@
         "tab": "Guia",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Comece aqui",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "index"
             ]
           },
           {
