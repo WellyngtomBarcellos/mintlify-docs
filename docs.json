@@ -4,8 +4,8 @@
   "name": "Lhama start doc",
   "colors": {
     "primary": "#5322E6",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#3b0bbf",
+    "dark": "#4d0eab"
   },
   "favicon": "/favicon.ico",
   "navigation": {
