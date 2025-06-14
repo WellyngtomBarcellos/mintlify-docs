@@ -36,27 +36,26 @@ API construida com 2 simples intensoes:
    post: api/video/compress/partial (Comprime com alguns parâmetros parciais)
    ```
 2. **Consistente:** Nossa API retorna sempre um option contendo o erro ou os dados de retorno, o que facilita a implementação em linguagens de tipagem forte e constistência em todas as operações.
-3. 
 
-   ```json
-   {
-     "data": {
-         "id": "lhama_A123BC45",
-         "url": "https://cdn.deezegg.com/lhama/lhama_A123BC45.mp4",
-   	  "time_expire": 600,
-         "time_execution": 1000,
-         "status": "COMPLETE",
-         "frequency": "SLOW",
-         "customer": {
-            "id": "user_lhama1234ABCD",
-            "premium": 165837261
-         },
-         "createdAt": "2024-11-04T18:38:28.573",
-         "updatedAt": "2024-11-04T18:38:28.573",
+```json
+{
+  "data": {
+      "id": "lhama_A123BC45",
+      "url": "https://cdn.deezegg.com/lhama/lhama_A123BC45.mp4",
+	  "time_expire": 600,
+      "time_execution": 1000,
+      "status": "COMPLETE",
+      "frequency": "SLOW",
+      "customer": {
+         "id": "user_lhama1234ABCD",
+         "premium": 165837261
       },
-      "error": null
-   }
-   ```
+      "createdAt": "2024-11-04T18:38:28.573",
+      "updatedAt": "2024-11-04T18:38:28.573",
+   },
+   "error": null
+}
+```
 
 # <Icon icon="envelope" iconType="thin" color="#3e20ff" size={40} /> Dúvidas ?
 
