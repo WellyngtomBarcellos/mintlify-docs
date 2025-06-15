@@ -20,7 +20,7 @@
   ],
   
   "paths": {
-    "/api/send": {
+    "/plants": {
       "post": {
         "description": "Creates a new plant in the store",
         "requestBody": {
