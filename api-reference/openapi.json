@@ -20,7 +20,7 @@
   ],
   
   "paths": {
-    "/plants": {
+    "/api/v1/send": {
       "post": {
         "description": "Creates a new plant in the store",
         "requestBody": {
@@ -60,6 +60,7 @@
         }
       }
     },
+    
     "/plants/{id}": {
       "delete": {
         "description": "Deletes a single plant based on the ID supplied",
