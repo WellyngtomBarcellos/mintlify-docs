@@ -20,7 +20,7 @@
   ],
   
   "paths": {
-    "/api/v1/send": {
+    "/api/v1/send/video": {
       "post": {
         "description": "Creates a new plant in the store",
         "requestBody": {
