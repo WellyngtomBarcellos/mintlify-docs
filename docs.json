@@ -44,7 +44,6 @@
           {
             "group": "Endpints/V1",
             "pages": [
-              "api-reference/endpoint/post",
               "api-reference/endpoint/get-status"
             ]
           }
