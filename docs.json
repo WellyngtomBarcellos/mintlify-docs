@@ -42,7 +42,7 @@
             ]
           },
           {
-            "group": "Endpints/V1",
+            "group": "Endpoints V2",
             "pages": [
               "api-reference/endpoint/get-status"
             ]
