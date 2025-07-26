@@ -33,7 +33,7 @@
               }
             }
           },
-          "required": true
+          "required": false
         },
         
         "responses": {
@@ -139,6 +139,7 @@
   
   "components": {
     "schemas": {
+      
       "Plant": {
         "required": [
           "name"
@@ -155,18 +156,10 @@
           }
         }
       },
-
-      
       "NewPlant": {
-        "allOf": [
-          {
-            "required": [],
-            "type": "object"
-            }
-          }
-        ]
+        "allOf": [{}]
       },
-
+      
       
       "Error": {
         "required": [
