@@ -20,12 +20,12 @@
   ],
   
   "paths": {
-    "/api/v1/send/video": {
+    "/v2/image/check": {
       
       "post": {
-        "description": "Creates a new plant in the store",
+        "description": "Envia uma imagem para verificação NSFW",
         "requestBody": {
-          "description": "Plant to add to the store",
+          "description": "Envia uma imagem para verificação NSFW",
           "content": {
             "application/json": {
               "schema": {
