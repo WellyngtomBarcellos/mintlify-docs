@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "https://lhama.deezegg.com"
+      "url": "https://api.deezegg.com"
     }
   ],
   "security": [
@@ -70,7 +70,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlant"
+                "$ref": ""
               }
             }
           },
