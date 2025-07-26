@@ -32,29 +32,47 @@ API construida com 2 simples intensoes:
 1. \*\*Direto: \*\*Cada rota faz exatamente oque você lê:
 
    ```bash
-   post: api/video/compress/global (Comprime com parâmetros globais)
-   post: api/video/compress/partial (Comprime com alguns parâmetros parciais)
+   post: /video/upload (Comprime com parâmetros globais)
+   post: /image/check (Verifica conteúdo na imagem)
    ```
 2. **Consistente:** Nossa API retorna sempre um option contendo o erro ou os dados de retorno, o que facilita a implementação em linguagens de tipagem forte e constistência em todas as operações.
 
 ```json
+Resposta de compressão
 {
   "data": {
     "id": "lhama_CZ2MY00T",
     "url": "https://lhama.deezegg.com/lhama/lhama_CZ2MY00T.mp4",
+	"thumbnail": "https://lhama.deezegg.com/lhama_thumbnail/lhama_CZ2MY00T.webp",
   	"frequency": "",
-  	"id": "lhama_CZ2MY00T",
   	"status": "COMPLETE",
   	"time_execution": 9.54,
   	"time_expire": 1749983294,
-  	"url": "https://lhama.deezegg.com/lhama/lhama_CZ2MY00T.mp4",
   	"customer": {
     	"id": 1,
-    	"email": "wellyngtombarcellos@gmail.com"
+    	"email": "seuemail@seudominio.com"
   	},
 	"createdAt":"2025-06-15T07:23:14.597"
   },
   "error": null
+}
+
+
+Resposta da verificação NSFW
+{
+    "data": {
+        "status": "COMPLETE",
+        "is_nsfw": false
+    },
+    "analytics": {
+        "simple": 0.9413,
+        "cartoon": 0.0554,
+        "Sexy": 0.003,
+        "anime_hentai": 0.0002,
+        "porn": 0.0001
+    },
+    "error": false,
+    "success": true
 }
 ```
 
