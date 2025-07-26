@@ -61,7 +61,7 @@
         }
       }
     },
-    "/api/status": {
+    "/api/v2/status": {
       
       "get": {
         "description": "Veja o status da api",
