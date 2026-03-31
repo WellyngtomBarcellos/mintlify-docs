@@ -1,6 +1,6 @@
 ---
 title: "Introdução"
-description: "Seja bem vindo(a) ao sistema lhama! Desenvolvido pela Deez Entertainments, foi criada especialmente para resover o problema de altos volumes de videos criados pelo usuário da atual plataforma de compartilhamento de conteúdos. "
+description: "Seja bem vindo(a) ao sistema lhama! Desenvolvido pela Ambarks, foi criada especialmente para resover o problema de altos volumes de videos e imagens criados pelo usuário da atual plataforma de compartilhamento de conteúdos. "
 ---
 
 <img
@@ -9,13 +9,14 @@ description: "Seja bem vindo(a) ao sistema lhama! Desenvolvido pela Deez Enterta
   alt="Hero Light"
 />
 
-<img
-  className="hidden dark:block"
-  src="/hero-dark.png"
-  alt="Hero Dark"
-  style={{ width:"100%" }}
-  title=""
-/>
+<Frame>
+  <img
+    className="hidden dark:block mx-auto"
+    src="/images/Gemini_Generated_Image_vj1fitvj1fitvj1f.png"
+    alt="Hero Dark"
+    style={{ width:"100%" }}
+  />
+</Frame>
 
 # <Icon icon="gear" iconType="thin" color="#3e20ff" size={40} /> Configurações
 
@@ -29,53 +30,32 @@ Com o sistema Lhama, você tem algumas ferramentas poderosas, incluindo a conver
 
 API construida com 2 simples intensoes:
 
-1. \*\*Direto: \*\*Cada rota faz exatamente oque você lê:
-
+1. \*\*Direto:\*\* Cada rota faz exatamente oque você lê:
    ```bash
-   post: /video/upload (Comprime com parâmetros globais)
-   post: /image/check (Verifica conteúdo na imagem)
+   post: /api/v2/video/lhama/compress (Comprime com parâmetros globais)
+   post: /api/v2/video/lhama/check (Verifica conteúdo no video)
    ```
 2. **Consistente:** Nossa API retorna sempre um option contendo o erro ou os dados de retorno, o que facilita a implementação em linguagens de tipagem forte e constistência em todas as operações.
 
 ```json
-Resposta de compressão
-{
-  "data": {
-    "id": "lhama_CZ2MY00T",
-    "url": "https://lhama.deezegg.com/lhama/lhama_CZ2MY00T.mp4",
-	"thumbnail": "https://lhama.deezegg.com/lhama_thumbnail/lhama_CZ2MY00T.webp",
-  	"frequency": "",
-  	"status": "COMPLETE",
-  	"time_execution": 9.54,
-  	"time_expire": 1749983294,
-  	"customer": {
-    	"id": 1,
-    	"email": "seuemail@seudominio.com"
-  	},
-	"createdAt":"2025-06-15T07:23:14.597"
-  },
-  "error": null
-}
-
-
-Resposta da verificação NSFW
-{
-    "data": {
-        "status": "COMPLETE",
-        "is_nsfw": false
-    },
-    "analytics": {
-        "simple": 0.9413,
-        "cartoon": 0.0554,
-        "Sexy": 0.003,
-        "anime_hentai": 0.0002,
-        "porn": 0.0001
-    },
-    "error": false,
-    "success": true
+"data": {
+   "id": "TL8OHGU20Y",
+   "status": "COMPLETE",
+   "nsfw": true,
+   "webhook": "NOT::AVALIABLE",
+   "nsfw_data": {
+      	"porn": 0.9319,
+        "simple": 0.054,
+        "sexy": 0.01,
+        "hentai": 0.0037,
+        "cartoon": 0.0003
+   },
+   "created_at": "2026-03-31T08:01:00.855Z",
+   "error": false,
+   "success": true
 }
 ```
 
 # <Icon icon="envelope" iconType="thin" color="#3e20ff" size={40} /> Dúvidas ?
 
-Estamos preparados para te ajudar na implementação no seu projeto\! Entre com contato pelo email [**suporte@deezegg.com**](mailto:suporte@deezegg.com)
+Estamos preparados para te ajudar na implementação no seu projeto! Entre com contato pelo email [**suporte-lhama@ambarks.com**](mailto:suporte@deezegg.com)

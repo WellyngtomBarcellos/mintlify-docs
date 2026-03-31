@@ -1,0 +1,84 @@
+---
+title: "Primeira requisição"
+---
+
+Comece a usar a API da Lhama em minutos.
+
+<Info>
+  Este guia rápido te ajudará a fazer sua primeira requisição à API da AbacatePay em poucos minutos.
+</Info>
+
+## Pré-requisitos
+
+Antes de começar, você precisa de:
+
+- Uma conta na Ambarks.com
+- Uma chave de API (criada no dashboard)
+- Conhecimento básico de HTTP e JSON
+
+<Check>
+  Novo na Ambarks ?  Crie agora mesmo sua conta no [Dashboard ](https://ambarks.com)
+</Check>
+
+# **Passo 1: Obter sua Chave de API**
+
+Primeiro, você precisa criar uma chave de API no dashboard da Ambarks:
+
+<Steps>
+  <Step title="Acesse o Dashboard">
+    Faça login no [dashboard da Ambarks](http://ambarks.com/login)
+  </Step>
+  <Step title="Crie sua chave de API">
+    Navegue até a sessão de integração e clieque em "gerar chave"
+  </Step>
+  <Step title="Copie sua chave">
+    Copia a chave criada e armazene em um local securo
+  </Step>
+</Steps>
+
+<Warning>
+  **Importante**: Sua chave de API é uma credencial sensível. Nunca a compartilhe publicamente ou a commite em repositórios de código.
+</Warning>
+
+# **Passo 2: Fazer sua Primeira Requisição**
+
+Agora vamos criar sua primeira integração de analize via API.
+
+## Exemplo com cURL
+
+```shellscript
+curl --request POST \
+  --url https://api.lhama.ambarks.com/v2/lhama/video/check \
+  --header "Authorization: Bearer API_KEY" \
+  --form "video=@/caminho/do/arquivo.mp4"
+```
+
+# Resposta de sucesso
+
+```json
+{
+    "data": {
+        "id": "OL6CODX54X",
+        "status": "COMPLETE",
+        "nsfw": true,
+        "nsfw_data": {
+            "porn": 0.9319,
+            "simple": 0.054,
+            "sexy": 0.01,
+            "hentai": 0.0037,
+            "cartoon": 0.0003
+        },
+        "created_at": "2026-03-31T08:22:21.062Z",
+        "error": false,
+        "success": true
+    }
+}
+```
+
+## Precisa de ajuda ?
+
+<Tip>
+  Suporte
+
+  Nossa equipe está à disposição! Contate-nos: [suporte-lhama@ambarks.com](mailto:suporte-lhama@ambarks.com)
+</Tip>

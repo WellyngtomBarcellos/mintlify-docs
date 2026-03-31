@@ -1,0 +1,129 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Lhama NSFW API",
+    "version": "2.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.deezegg.com"
+    }
+  ],
+  "paths": {
+    "/api/v2/lhama/image/check": {
+      "post": {
+        "summary": "Verificar imagem NSFW",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": ["file"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultado da análise",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NSFWResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v2/lhama/video/check": {
+      "post": {
+        "summary": "Verificar videos NSFW",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": ["file"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultado da análise",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NSFWResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  },
+  "components": {
+    "schemas": {
+      "NSFWResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "COMPLETE"
+          },
+          "nsfw": {
+            "type": "boolean",
+            "example": true
+          },
+          "score": {
+            "type": "number",
+            "example": 0.87
+          }
+        }
+      },
+      "StatusResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "ok"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}
