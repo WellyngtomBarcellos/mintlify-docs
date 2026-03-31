@@ -83,6 +83,6 @@
       "display": "interactive",
       "proxy": false
     },
-    "openapi": "/openapi-v2.json"
+    "openapi": "/openapi-v3.json"
   }
 }
