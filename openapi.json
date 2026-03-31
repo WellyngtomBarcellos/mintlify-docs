@@ -13,6 +13,7 @@
   "paths": {
     "/api/v2/lhama/image/check": {
       "post": {
+        "tags": ["Image"],
         "summary": "Verificar imagem NSFW",
         "description": "Envia uma imagem para análise de conteúdo NSFW.",
         "security": [
@@ -71,6 +72,7 @@
     },
     "/api/v2/lhama/video/check": {
       "post": {
+        "tags": ["video"],
         "summary": "Verificar vídeo NSFW",
         "description": "Envia um vídeo para análise de conteúdo NSFW.",
         "security": [
