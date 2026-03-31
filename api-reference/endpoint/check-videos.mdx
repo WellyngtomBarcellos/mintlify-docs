@@ -1,11 +1,11 @@
 ---
 openapi: "POST /api/v2/lhama/image/check"
-title: "Verificação de Imagens"
-description: "crie uma verificação de conteúdo de imagens."
+title: "Verificação de Videos"
+description: "crie uma verificação de conteúdo de video."
 ---
 
 ```shellscript filename
-Post: /api/v2/lhama/image/check
+Post: /api/v2/lhama/video/check
 ```
 
 #### **Authorizations headers**
@@ -16,7 +16,7 @@ Post: /api/v2/lhama/image/check
 
 #### **Body**
 
-<ResponseField name="image" type="file" required>
+<ResponseField name="video" type="file" required>
   Nesse campo você enviará o caminho ou arquivo que será analizado.
 
   Este é o único campo que deve se preocupar -- o **_processamento total será feito em background_**, e não será retornado em webhook.
