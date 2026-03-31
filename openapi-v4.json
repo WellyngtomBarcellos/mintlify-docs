@@ -2,17 +2,19 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Lhama NSFW API",
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "description": "API para análise de conteúdo NSFW em imagens e vídeos."
   },
   "servers": [
     {
-      "url": "https://api.deezegg.com"
+      "url": "https://api.lhama.ambarks.com/api/v2"
     }
   ],
   "paths": {
-    "/api/v2/lhama/image/check": {
+    "/lhama/image/check": {
       "post": {
         "summary": "Verificar imagem NSFW",
+        "description": "Envia uma imagem para análise de conteúdo NSFW.",
         "security": [
           {
             "bearerAuth": []
@@ -27,10 +29,16 @@
                 "properties": {
                   "file": {
                     "type": "string",
-                    "format": "binary"
+                    "format": "binary",
+                    "description": "Arquivo de imagem para análise (jpg, png, etc)"
                   }
                 },
                 "required": ["file"]
+              },
+              "encoding": {
+                "file": {
+                  "contentType": "image/jpeg, image/png"
+                }
               }
             }
           }
@@ -45,13 +53,26 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Requisição inválida"
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "413": {
+            "description": "Arquivo muito grande"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
           }
         }
       }
     },
-    "/api/v2/lhama/video/check": {
+    "/lhama/video/check": {
       "post": {
-        "summary": "Verificar videos NSFW",
+        "summary": "Verificar vídeo NSFW",
+        "description": "Envia um vídeo para análise de conteúdo NSFW.",
         "security": [
           {
             "bearerAuth": []
@@ -66,10 +87,16 @@
                 "properties": {
                   "file": {
                     "type": "string",
-                    "format": "binary"
+                    "format": "binary",
+                    "description": "Arquivo de vídeo para análise (mp4, mov, etc)"
                   }
                 },
                 "required": ["file"]
+              },
+              "encoding": {
+                "file": {
+                  "contentType": "video/mp4, video/quicktime"
+                }
               }
             }
           }
@@ -84,11 +111,22 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Requisição inválida"
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "413": {
+            "description": "Arquivo muito grande"
+          },
+          "500": {
+            "description": "Erro interno do servidor"
           }
         }
       }
     }
-
   },
   "components": {
     "schemas": {
@@ -97,32 +135,28 @@
         "properties": {
           "status": {
             "type": "string",
+            "description": "Status do processamento",
             "example": "COMPLETE"
           },
           "nsfw": {
             "type": "boolean",
+            "description": "Indica se o conteúdo é NSFW",
             "example": true
           },
           "score": {
             "type": "number",
+            "description": "Probabilidade de ser NSFW (0 a 1)",
             "example": 0.87
           }
-        }
-      },
-      "StatusResponse": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string",
-            "example": "ok"
-          }
-        }
+        },
+        "required": ["status", "nsfw", "score"]
       }
     },
     "securitySchemes": {
       "bearerAuth": {
         "type": "http",
-        "scheme": "bearer"
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     }
   }
