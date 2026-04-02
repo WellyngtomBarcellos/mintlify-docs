@@ -52,11 +52,6 @@
     ]
   },
   
-  "logo": {
-    "light": "/logo/lhama-black.png",
-    "dark": "/logo/lhama.png"
-  },
-  
   "navbar": {
     "links": [
       {
@@ -75,7 +70,7 @@
   "footer": {
     "socials": {
       "x": "https://x.com/deezegg",
-      "instagram": "https://instagram.com/deezegg"
+      "instagram": "https://instagram.com/ambarkstudio"
     }
   },
   "api": {
@@ -84,5 +79,13 @@
       "proxy": false
     },
     "openapi": "/openapi.json"
+  },
+  "appearance": {
+    "strict": true,
+    "default": "dark"
+  },
+  "logo": {
+    "light": "/images/LogoWBFotografia-Branco.png",
+    "dark": "/images/LogoWBFotografia-Branco.png"
   }
 }
