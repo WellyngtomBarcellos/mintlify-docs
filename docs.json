@@ -4,7 +4,7 @@
   "name": "Lhama",
   "colors": {
     "primary": "#1a1a22",
-    "light": "#515165",
+    "light": "#8888a6",
     "dark": "#24242e"
   },
   "favicon": "/favicon.ico",
@@ -81,7 +81,7 @@
     "openapi": "/openapi.json"
   },
   "appearance": {
-    "strict": true,
+    "strict": false,
     "default": "dark"
   },
   "logo": {
