@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Lhama",
   "colors": {
-    "primary": "#5322E6",
-    "light": "#3b0bbf",
-    "dark": "#4d0eab"
+    "primary": "#1a1a22",
+    "light": "#515165",
+    "dark": "#24242e"
   },
   "favicon": "/favicon.ico",
   "navigation": {
